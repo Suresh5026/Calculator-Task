@@ -76,7 +76,16 @@ function operation(buttonValue) {
 
 buttons.forEach(button => {
     let buttonValue = button.innerText;
+
+    if(buttonValue === button.innerText){
     button.addEventListener('click', function () {
         operation(buttonValue);
     });
+}
+else{
+    button.addEventListener('click', function () {
+        alert("keys disabled")
+    });
+
+}
 });
